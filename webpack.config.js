@@ -1,9 +1,9 @@
-var path = require('path');
-var webpack = require('webpack');
+const  path = require('path');
+const webpack = require('webpack');
 
-module.exports = {
+const config = {
   context: __dirname,
-  entry: ['./js/App.jsx'],
+  entry: ['./js/ClientApp.jsx'],
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
@@ -11,6 +11,9 @@ module.exports = {
   },
   devServer: {
     publicPath: '/public/'
+  },
+  resolve: {
+    extensions: ['.jsx', '.js', '.json']
   },
   module: {
     loaders: [
@@ -24,4 +27,6 @@ module.exports = {
       }
     ]
   }
-}
+};
+
+module.exports = config;

@@ -1,11 +1,8 @@
 import React from 'react';
+import { render } from 'react-dom';
 
-class MyComp {
-  render() {
-    return (
-      <div>hello</div>
-    )
-  }
-}
+const MyComp = () => (
+  <div>hello</div>
+);
 
 export default MyComp;
